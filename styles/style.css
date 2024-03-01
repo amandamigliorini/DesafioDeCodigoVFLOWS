@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;                                           
+}
+
+h1{
+    text-align: center;   
+}
+
+.form fieldset{
+    border: 1px solid rgba(89, 89, 89, 1);;
+    border-radius: 10px;
+    margin: 1rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: .5rem;
+}
+
+.form fieldset legend{
+    background-color: rgba(0, 133, 178, 1);
+    border-radius: 5px;
+    padding: 0.2rem .5rem; 
+    color: white;   
+}
+
+
+.form .submit, .form .add-product, .form .add-file{
+    width:inherit;
+    padding: .5rem;
+    border-radius: 10px;
+    background-color: rgba(1, 158, 15, 1);
+    border:none;
+    text-emphasis-color: white;
+    color: white;
+    margin: 1rem;
+    box-shadow: none;
+}
+
+.form fieldset .itens{
+    background: none;
+    width:fit-content;
+    border: none;
+    margin-left: 1rem;
+    color: #595959;
+}
+
+.anexos{
+    display: flex;
+    align-items: center;
+}
+.trash-icon, .eye-icon{
+    background-color: red;
+    width: 40px;
+    height: auto;
+    padding: .2rem;
+    margin: .5rem;
+    border-radius: .2rem;
+}
+.eye-icon{
+    background-color: rgba(0, 133, 178, 1);
+}
+
+.form .save{
+    border: none;
+}
+
+.form .supplier{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    column-gap: 1rem;
+}
+
+.form .supplier input{
+    width: 100%;
+    padding: .5rem;
+    border-radius: 8px;
+}
+
+.company, .fantasy-name, .address{
+    grid-column: 1/6;
+    
+}
+.cnpj, .i-estadual, .i-municipal, .number{
+    grid-column: 6/9;
+    
+}
+.cep, .neighborhood{
+    grid-column: 1/4;
+}
+.more-info{
+    grid-column: 1/9;
+}
+.city{
+    grid-column: 4/7;
+}
+.state, .email{
+    grid-column: 7/9;
+}
+.contact{
+    grid-column: 1/5;
+}
+.phone{
+    grid-column: 5/7;
+}
+
+#file1, #file2{
+   display: none;
+}
+
+
+
+@media (max-width: 850px) {
+
+    .form .supplier{
+        display: block;
+    }
+}

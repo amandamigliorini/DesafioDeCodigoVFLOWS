@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Front-End - VFlows</title>
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55?styles=30128" rel="stylesheet">        
+    <link rel="stylesheet" type="text/css" href="styles/fluig-style-guide.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <!--<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>-->
+    <script src="js/NewProduct.js" defer></script>
+    
+</head>
+<body>
+    <div class="fluig-style-guide">
+        <h1>CADASTRO FORNECEDOR/PRODUTO</h1>
+        <div class="form">
+            <form role="form">
+                <fieldset class="supplier">
+                    <legend>Dados do Fornecedor</legend>
+                    <div class="form-group company">
+                        <label>Razão Social</label>
+                        <input type="text" name="razao-social" id="razao-social" required>
+                    </div>
+                    <div class="form-group cnpj">
+                        <label>CNPJ</label>
+                        <input type="text" name="cnpj" id="cnpj" required>
+                    </div>
+                    <div class="form-group fantasy-name">
+                        <label>Nome Fantasia</label>
+                        <input type="text" name="nome-fantasia" id="nome-fantasia" required>
+                    </div>
+                    <div class="form-group i-estadual">
+                        <label>Inscrição Estadual</label>
+                        <input type="text" name="i-estadual" id="i-estadual">
+                    </div>
+                    <div class="form-group cep">
+                        <label>CEP</label>
+                        <input type="text" name="cep" id="cep" required>
+                        <p class="error"></p>
+                    </div>
+                    <div class="form-group i-municipal">
+                        <label>Inscrição Municipal</label>
+                        <input type="text" name="i-municipal" id="i-municipal">
+                    </div>
+                    <div class="form-group address">
+                        <label>Endereço</label>
+                        <input type="text" name="endereco" id="endereco" required>
+                    </div>
+                    <div class="form-group number">
+                        <label>Número</label>
+                        <input type="text" name="numero" id="numero" required>
+                    </div>
+                    <div class="form-group more-info">
+                        <label>Complemento</label>
+                        <input type="text" name="complemento" id="complemento" required>
+                    </div>
+                    <div class="form-group neighborhood">
+                        <label>Bairro</label>
+                        <input type="text" name="bairro" id="bairro" required>
+                    </div>
+                    <div class="form-group city">
+                        <label>Município</label>
+                        <input type="text" name="municipio" id="municipio" required>
+                    </div>
+                    <div class="form-group state">
+                        <label>Estado</label>
+                        <input type="text" name="estado" id="estado" required>
+                    </div>
+                    <div class="form-group contact">
+                        <label>Nome da Pessoa de Contato</label>
+                        <input type="text" name="contato" id="contato" required>
+                    </div>
+                    <div class="form-group phone">
+                        <label>Telefone</label>
+                        <input type="tel" name="telefone" id="telefone" required>
+                    </div>
+                    <div class="form-group email">
+                        <label>E-mail</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                </fieldset>
+                
+                <div class="form">
+                    <form role="form">
+                        <fieldset>
+                            <legend>Produtos</legend>
+                                <new-product title="Produto - 1" required="true"></new-product>
+                                <new-product title="Produto - 2" required="false"></new-product>
+                                <!--<button class="add-product">Adicionar Produto</button>-->
+                        </fieldset>
+                    </form>
+                </div>
+
+                <div class="form">
+                    <form role="form">
+                        <fieldset>
+                            <legend>Anexos</legend>
+                            <fieldset>
+                                <legend class="itens">Itens</legend>
+                                <div class="form-group anexos">
+                                    <img class="trash-icon" src="/assets/fluigicon-trash.png" alt="trash icon">
+                                    <img class="eye-icon" src="/assets/fluigicon-eye-open.png" alt="eye icon">
+                                    <input type="file" title="Documento 1" id="file1">
+                                <p>Documento Anexo 1</p>
+                                </div>
+                                <div class="form-group anexos">
+                                    <img class="trash-icon" src="/assets/fluigicon-trash.png" alt="trash icon">
+                                    <img class="eye-icon" src="/assets/fluigicon-eye-open.png" alt="eye icon">
+                                    <input type="file" title="Documento 2" id="file2">
+                                <p>Documento Anexo 2</p>
+                                </div>
+                                <button class="add-file">Incluir Anexo</button>
+                            </fieldset>
+                        </fieldset>
+                    </form>
+                </div>
+                               
+                <fieldset class="save">
+                    <button class="submit" id="save" type="submit">Salvar Fornecedor</button>
+                </fieldset> 
+
+            </form> 
+        </div>            
+    </div>
+    <script src="js/cep.js"></script>
+    <script src="js/addSupplier.js"></script>
+   
+</body>
+</html>
